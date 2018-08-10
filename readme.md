@@ -1,5 +1,5 @@
 This project is developed using LARAVEL framework in PHP.
-The prject is tested with following versins:
+The project is tested with following versoins:
 php 7.1
 apache 2.4
 mysql 5.6
