@@ -1,0 +1,3 @@
+https://datatables.yajrabox.com/starter
+while applying datatables compose above packege using composer
+And remove app.js from html if jquesry is included
