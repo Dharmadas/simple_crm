@@ -50,9 +50,21 @@
 
 @section('javascript')
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" charset="utf8" src="{{ asset('js/dataTables.buttons.min.js') }}"></script>
+    <script type="text/javascript" charset="utf8" src="{{ asset('js/buttons.flash.min.js') }}"></script>
+    <script type="text/javascript" charset="utf8" src="{{ asset('js/jszip.min.js') }}"></script>
+    <script type="text/javascript" charset="utf8" src="{{ asset('js/pdfmake.min.js') }}"></script>
+    <script type="text/javascript" charset="utf8" src="{{ asset('js/vfs_fonts.js') }}"></script>
+    <script type="text/javascript" charset="utf8" src="{{ asset('js/buttons.html5.min.js') }}"></script>
+    <script type="text/javascript" charset="utf8" src="{{ asset('js/buttons.print.min.js') }}"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $('#datatable').DataTable();
+            $('#datatable').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                        'csv', 'excel', 'pdf'
+                ]
+            });
         });
     </script>
 @endsection

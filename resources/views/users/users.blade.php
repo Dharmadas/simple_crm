@@ -65,10 +65,21 @@
     <script src="{{  asset('vendor/datatables/js/jquery.dataTables.min.js')}}"></script>
     <script src="{{ asset('vendor/datatables-plugins/dataTables.bootstrap.min.js') }}"></script>
     <script src="{{ asset('vendor/datatables-responsive/dataTables.responsive.js') }}"></script>
+    <script type="text/javascript" charset="utf8" src="{{ asset('js/dataTables.buttons.min.js') }}"></script>
+    <script type="text/javascript" charset="utf8" src="{{ asset('js/buttons.flash.min.js') }}"></script>
+    <script type="text/javascript" charset="utf8" src="{{ asset('js/jszip.min.js') }}"></script>
+    <script type="text/javascript" charset="utf8" src="{{ asset('js/pdfmake.min.js') }}"></script>
+    <script type="text/javascript" charset="utf8" src="{{ asset('js/vfs_fonts.js') }}"></script>
+    <script type="text/javascript" charset="utf8" src="{{ asset('js/buttons.html5.min.js') }}"></script>
+    <script type="text/javascript" charset="utf8" src="{{ asset('js/buttons.print.min.js') }}"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $('#datatable').DataTable({
-                responsive: true
+                responsive: true,
+                dom: 'Bfrtip',
+                buttons: [
+                        'csv', 'excel', 'pdf'
+                ]
             });
         });
     </script>

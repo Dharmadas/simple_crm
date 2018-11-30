@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('style')
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/jquery.dataTables.css') }}">
 @endsection
 
 @section('content')
@@ -43,7 +43,14 @@
 @endsection
 
 @section('javascript')
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" charset="utf8" src="{{ asset('js/jquery.dataTables.js') }}"></script>
+    <script type="text/javascript" charset="utf8" src="{{ asset('js/dataTables.buttons.min.js') }}"></script>
+    <script type="text/javascript" charset="utf8" src="{{ asset('js/buttons.flash.min.js') }}"></script>
+    <script type="text/javascript" charset="utf8" src="{{ asset('js/jszip.min.js') }}"></script>
+    <script type="text/javascript" charset="utf8" src="{{ asset('js/pdfmake.min.js') }}"></script>
+    <script type="text/javascript" charset="utf8" src="{{ asset('js/vfs_fonts.js') }}"></script>
+    <script type="text/javascript" charset="utf8" src="{{ asset('js/buttons.html5.min.js') }}"></script>
+    <script type="text/javascript" charset="utf8" src="{{ asset('js/buttons.print.min.js') }}"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $('#datatable').DataTable({
@@ -59,6 +66,10 @@
                     {"data" : "name"},
                     {"data" : "email"},
                     {"data" : "phone"},
+                ],
+                dom: 'Bfrtip',
+                buttons: [
+                    'csv', 'excel', 'pdf'
                 ]
             });
         });
