@@ -104,7 +104,7 @@
                             </div>
                         </div>
 
-                        <div class="panel panel-default">
+                        <div class="panel panel-info">
 
                                 @foreach($userUpdates as $userUpdate)
                                     <div class="panel-heading">
