@@ -101,6 +101,41 @@
                         </div>
                         <!-- /.row -->
                     </div>
+                    <!-- Area Chart Example-->
+                    <div class="row">
+                    <div class="col-md-6 col-lg-6">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <i class="fa fa-area-chart"></i> New Customers
+                            </div>
+                            <div class="panel-body">
+                                <canvas id="newCustomersChart" width="100%" height="40"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Bar Chart Example-->
+                    <div class="col-md-6 col-lg-6">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <i class="fa fa-area-chart"></i> Confirmed Sales
+                            </div>
+                            <div class="panel-body">
+                                <canvas id="confirmedSalesChart" width="100%" height="40"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- Bar Line Example-->
+                    <div class="raw">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <i class="fa fa-area-chart"></i> Total Conversations
+                            </div>
+                            <div class="panel-body">
+                                <canvas id="totalConversationsChart" width="100%" height="20"></canvas>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- /.panel-body -->
             </div>
@@ -109,4 +144,9 @@
         <!-- /.col-lg-12 -->
     </div>
     <!-- /.row -->
+@endsection
+
+@section('javascript')
+    <script type="text/javascript" charset="utf8" src="{{ asset('js/Chart.js') }}"></script>
+    <script type="text/javascript" charset="utf8" src="{{ asset('js/sb-admin-charts.js') }}"></script>
 @endsection
