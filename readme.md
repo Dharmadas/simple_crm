@@ -12,7 +12,7 @@ You can clone/download the project and follow below steps:
 4. Rename file .env.example to .env
 5. Change the mysql DB_USERNAME and DB_PASSWORD values in .env file
 6. Give write access to storage/ directory e.g. chmod -R 777 storage/
-7. Run command php artisan key:generate from command prompt
+7. From command prompt Run command php artisan key:generate
 8. Run command php artisan migrate --seed
 9. Go to browser and open http://your-website/simple_crm/public OR you can change host file and change DocumentRoot to http://your-website/simple_crm/public
 
