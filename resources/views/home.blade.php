@@ -147,6 +147,41 @@
 @endsection
 
 @section('javascript')
+    <script type="text/javascript">
+        var newCustomersChartData_labels = [];
+        var newCustomersChartData_data = [];
+        var confirmedSaleChartData_labels = [];
+        var confirmedSaleChartData_data = [];
+        var conversionChartData_labels = [];
+        var conversionChartData_data = [];
+
+        var newCustomersChartData = <?php print_r($newCustomersChartData); ?>;
+        var confirmedSaleChartData = <?php print_r($confirmedSaleChartData); ?>;
+        var conversionChartData = <?php print_r($conversionChartData); ?>;
+        console.log(conversionChartData);
+
+        for(var i = 0; i < newCustomersChartData.length; i++) {
+            var obj = newCustomersChartData[i];
+
+            newCustomersChartData_labels.push(obj.creation_date);
+            newCustomersChartData_data.push(obj.new_customers);
+        }
+
+        for(var i = 0; i < confirmedSaleChartData.length; i++) {
+            var obj = confirmedSaleChartData[i];
+
+            confirmedSaleChartData_labels.push(obj.creation_date);
+            confirmedSaleChartData_data.push(obj.confirmed_sales);
+        }
+
+        for(var i = 0; i < conversionChartData.length; i++) {
+            var obj = conversionChartData[i];
+
+            conversionChartData_labels.push(obj.creation_date);
+            conversionChartData_data.push(obj.conversions);
+        }
+        
+    </script>
     <script type="text/javascript" charset="utf8" src="{{ asset('js/Chart.js') }}"></script>
     <script type="text/javascript" charset="utf8" src="{{ asset('js/sb-admin-charts.js') }}"></script>
 @endsection

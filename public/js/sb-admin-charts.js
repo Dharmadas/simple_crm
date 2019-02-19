@@ -7,9 +7,9 @@ var ctx = document.getElementById("newCustomersChart");
 var myLineChart = new Chart(ctx, {
   type: 'line',
   data: {
-    labels: ["Mar 1", "Mar 2", "Mar 3", "Mar 4", "Mar 5", "Mar 6", "Mar 7", "Mar 8", "Mar 9", "Mar 10", "Mar 11", "Mar 12", "Mar 13", "Mar 14"],
+    labels: newCustomersChartData_labels,
     datasets: [{
-      label: "Sessions",
+      label: "New Customers",
       lineTension: 0.3,
       backgroundColor: "rgba(2,117,216,0.2)",
       borderColor: "rgba(2,117,216,1)",
@@ -20,7 +20,8 @@ var myLineChart = new Chart(ctx, {
       pointHoverBackgroundColor: "rgba(2,117,216,1)",
       pointHitRadius: 20,
       pointBorderWidth: 2,
-      data: [10000, 30162, 26263, 18394, 18287, 28682, 31274, 33259, 25849, 24159, 32651, 31984, 38451, 38700],
+      data: newCustomersChartData_data,
+      pointRadius: 0,
     }],
   },
   options: {
@@ -38,8 +39,8 @@ var myLineChart = new Chart(ctx, {
       }],
       yAxes: [{
         ticks: {
-          min: 0,
-          max: 40000,
+          //min: 0,
+          //max: 40000,
           maxTicksLimit: 5
         },
         gridLines: {
@@ -55,14 +56,15 @@ var myLineChart = new Chart(ctx, {
 // -- Bar Chart Example
 var ctx = document.getElementById("confirmedSalesChart");
 var myLineChart = new Chart(ctx, {
-  type: 'bar',
+  type: 'line',
   data: {
-    labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "December"],
+    labels: confirmedSaleChartData_labels,
     datasets: [{
-      label: "Revenue",
+      label: "Confirmed Sales",
       backgroundColor: "#5cb85c",
       borderColor: "#5cb85c",
-      data: [4215, 5312, 6251, 7841, 9821, 14984, 4215, 5312, 6251, 7841, 9821, 14984],
+      data: confirmedSaleChartData_data,
+      pointRadius: 0,
     }],
   },
   options: {
@@ -80,8 +82,8 @@ var myLineChart = new Chart(ctx, {
       }],
       yAxes: [{
         ticks: {
-          min: 0,
-          max: 15000,
+          //min: 0,
+          //max: 15000,
           maxTicksLimit: 5
         },
         gridLines: {
@@ -91,15 +93,15 @@ var myLineChart = new Chart(ctx, {
     },
     legend: {
       display: false
-    }
-  }
+    },
+  },
 });
 // -- Bar Chart Example
 var ctx = document.getElementById("totalConversationsChart");
 var myLineChart = new Chart(ctx, {
   type: 'line',
   data: {
-    labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "December"],
+    labels: conversionChartData_labels,
     datasets: [{
       label: "Conversations",
       lineTension: 0.3,
@@ -112,7 +114,8 @@ var myLineChart = new Chart(ctx, {
       pointHoverBackgroundColor: "rgba(2,117,216,1)",
       pointHitRadius: 20,
       pointBorderWidth: 2,
-      data: [4215, 5312, 6251, 7841, 9821, 14984, 4215, 5312, 6251, 7841, 9821, 14984],
+      data: conversionChartData_data,
+      pointRadius: 0,
     }],
   },
   options: {
@@ -130,8 +133,8 @@ var myLineChart = new Chart(ctx, {
       }],
       yAxes: [{
         ticks: {
-          min: 0,
-          max: 15000,
+          //min: 0,
+          //max: 15000,
           maxTicksLimit: 5
         },
         gridLines: {
