@@ -1,20 +1,33 @@
-This project is developed using LARAVEL framework in PHP.
-The project is tested with following versoins:
-php 7.1
-apache 2.4
-mysql 5.6
-composer should be installed on your system.(https://getcomposer.org/download/)
+# Simple CRM Solution
+This is a plug and play tool that can be used by any team.
 
-You can clone/download the project and follow below steps:
-1. Through command prompt go to project directory where you cloned/downloaded.
-2. Rename .env.example to .env
-3. Create a database crm or you can edit the .env file and change the database name that you already created.(If you have already created db, don't create any table inside it)
-4. Create mysql user crm or you can create new mysql user and grant ALL access to crm database or your database that you created.
-5. Change the mysql user password in .env file
-6. Give write access to storage/ directory e.g. chmod -R 777 storage/
-7. In addition, make sure that the rewrite module is enabled for your web server.
-8. Go to project directory though command prompt. e.g. cd /var/www/html/simple_crm
-9. Run command php artisan key:generate
-10. Run command php artisan migrate --seed
-11. Go to browser and open http://your-website/simple_crm/public OR you can change host file and change DocumentRoot to http://your-website/simple_crm/public
-12. Default email-id is admin@admin.com and password is password. Please login to the interface and go Users. Then modify Admin user and change password.
+## Getting Started
+You can clone/download the project and follow the steps. It will create a crm with all backend and frontend set up for you.
+Then you will have to create users and other stuff like business units, departments etc. to make it personal for your team.
+
+### Prerequisites
+This project is developed using LARAVEL framework in PHP.
+You need a webserver for this project. You can also run the project on your localhost and test it.
+You also need following packages installed on your webserver:
+* php 7.1 
+* apache 2.4 
+* mysql 5.6 
+
+### Installing & Deployment
+* Create a database named crm in mysql.
+* Create mysql user crm and grant ALL access to crm database.
+* Through command prompt go to project directory where you cloned/downloaded the project. e.g. ```cd /var/www/html/simple_crm```
+* Rename file .env.example to .env e.g. ```mv .env.example .env```
+* Change the mysql DB_USERNAME and DB_PASSWORD values in .env file
+* Give write access to storage/ directory e.g. ```chmod -R 777 storage/```
+* Run command ```php artisan key:generate```
+* Run command ```php artisan migrate --seed```
+* Go to browser and open http://your-website/simple_crm/public
+
+## Built With
+Laravel 5.6
+
+## Notes
+* Default email-id to log in crm is admin@admin.com and password is password. Please login to the interface and go to Users. Then modify Admin user and change password.
+* Make sure that the rewrite module is enabled for your web server. Mostly this is enabled by default. read morehttps://www.digitalocean.com/community/tutorials/how-to-set-up-mod_rewrite-for-apache-on-centos-7
+* you can change host file and point DocumentRoot to http://your-website/simple_crm/public if you want to hide the full path of project.
